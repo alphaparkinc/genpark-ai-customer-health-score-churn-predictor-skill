@@ -1,0 +1,38 @@
+{
+  "name": "genpark-ai-customer-health-score-churn-predictor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - AI customer health scorer that analyzes usage signals, predicts churn probability, and triggers CS playbooks.",
+  "author": "genpark",
+  "category": "customer-success",
+  "tags": [
+    "churn-prediction",
+    "health-score",
+    "customer-success",
+    "usage-signals",
+    "cs-ai"
+  ],
+  "inputs": {
+    "account_id": {
+      "type": "string"
+    },
+    "usage_signals": {
+      "type": "object"
+    }
+  },
+  "outputs": {
+    "health_score": {
+      "type": "number"
+    },
+    "churn_risk": {
+      "type": "string"
+    },
+    "churn_probability_pct": {
+      "type": "number"
+    },
+    "recommended_playbook": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
